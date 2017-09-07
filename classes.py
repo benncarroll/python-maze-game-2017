@@ -1,12 +1,16 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from maze import *
 
+from maze import *
+import random
+
+
+# Player Class
 
 class Player(object):
     """docstring for Player."""
 
-    def __init__(self, mode=1):
+    def __init__(self):
         super(Player, self).__init__()
 
         self.pos = (1, 3)  # (Y,X)
