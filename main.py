@@ -16,7 +16,6 @@ from time import sleep
 ##############################
 
 from classes import *
-from maze import *
 from mazes import *
 from strings import *
 
@@ -282,7 +281,8 @@ def print_map(screen):
     # Debug Info
     if debug:
         screen.addstr(0, 0, "Debug Info:", curses.color_pair(1))
-        screen.addstr(1, 0, "Coins: {} Total: {} RC: {} Lives: {} Set: {}".format(p.coins, p.t_coins, p.got_coin(), p.lives, p.lives_received), curses.color_pair(1))
+        screen.addstr(1, 0, "Coins: {} Total: {} RC: {} Lives: {} Set: {}".format(
+            p.coins, p.t_coins, p.got_coin(), p.lives, p.lives_received), curses.color_pair(1))
 
     screen.refresh()
     pass
