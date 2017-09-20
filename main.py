@@ -302,6 +302,7 @@ def main(screen):
     global maze_coins
     global recovering
     global reco_count
+    global cmaze
 
     # More curses jazz
     curses.init_pair(1, curses.COLOR_RED, curses.COLOR_CYAN)
@@ -382,6 +383,7 @@ def main(screen):
         # Check for tutorial
         if key == 116 or key == 114:
             cmaze = 0
+            p.full_reset()
             title_screen(screen, 0)
             print_map(screen)
 
